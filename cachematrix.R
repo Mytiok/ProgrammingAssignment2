@@ -1,7 +1,12 @@
-## Put comments here that give an overall description of what your
-## functions do
+##The function allows to use cashed date for the inversed matrix
 
-## Write a short comment describing this function
+
+## The following functions are used to create an object to store a matrix and cache its inverse. 
+## The first function, makeCacheMatrix creates a special “matrix”, which is really a list containing a function to:
+## set the value of the matrix
+## get the value of the matrix
+## set the value of the inverse
+## get the value of the inverse
 
 makeCacheMatrix <- function(x = matrix()) {
 i <- NULL
@@ -17,8 +22,8 @@ i <- NULL
              getinverse = getinverse)
 }
 
-
-## Write a short comment describing this function
+## This function computes the inverse of the matrix returned by makeCacheMatrix above. 
+## If the inverse has already been calculated, then cacheSolve should retrieve the inverse from the cache.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
